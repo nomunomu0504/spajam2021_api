@@ -1,4 +1,4 @@
-import {Body, Controller, Post} from "@nestjs/common";
+import {Body, Controller, Get, Post} from "@nestjs/common";
 
 /**
  * Hello Controller
@@ -7,11 +7,10 @@ import {Body, Controller, Post} from "@nestjs/common";
 export class HelloController {
   /**
    * Say Hello
-   * @param {string} name
    * @returns {string}
    */
-  @Post()
-  public sayHello(@Body() name: string): string {
-    return `Hello ${name}`;
+  @Get()
+  public sayHello(): string {
+    return "Hello World.";
   }
 }
